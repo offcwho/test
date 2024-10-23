@@ -8,10 +8,11 @@ export default async function Id({ params } : { params: { user: string } }) : Pr
         <div className="app__wrapper-channel channel">
             {rows.map((row) => (
                 <div className="channel__header" key={row.id}>
+                    {row.id} - {row.quantity}
                     <div className="channel__icon">
 
                     </div>
-                    <h3 className="channel__name">{row.username}</h3>
+                    <h3 className="channel__name"></h3>
                 </div>
             ))}
         </div>
