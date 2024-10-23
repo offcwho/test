@@ -1,0 +1,105 @@
+:root{
+    --container-width: 100vw;
+    --container-height: 100vh;
+    --container-bgc: #191919;
+    --chats-width: 30rem;
+    --chats-bgc: #1E1E1E;
+    --color-icon: #ccc;
+    --chat-hover: rgba(42, 42, 42, 0.6);
+
+    --radius-sm: 18px;
+    --radius-rounded: 50%;
+    --icon-size: 30px;
+
+    --transition-default: all .3s ease-in-out;
+}
+body{
+    overflow-x: hidden;
+}
+h3{
+    font-size: 20px;
+}
+p{
+    font-size: 14px;
+    color: #6e6e6e;
+}
+
+/* App Styles */
+.app{
+    width: 100vw;
+    height: 100vh;
+}
+.app__container{
+    display: flex;
+    margin-inline: auto;
+    max-width: var(--container-width);
+    height: var(--container-height);
+    background-color: var(--container-bgc);
+}
+.app__chats{
+    display: flex;
+    flex-direction: column;
+    height: var(--container-height);
+    width: var(--chats-width);
+    background-color: var(--chats-bgc);
+}
+.app__search{
+    position: relative;
+    height: 100px;
+}
+.app__search-input{
+    padding: 35px 40px;
+    width: 100%;
+    height: 100%;
+    background-color: #191919;
+}
+.app__search-input:focus-visible{
+    outline: none;
+}
+.app__search-button{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.app__list{
+    padding: 10px 15px;
+    height: 100vh;
+    overflow-y: auto;
+}
+.app__item{
+    padding-inline: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 80px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-default);
+}
+.app__item:hover{
+    background-color: var(--chat-hover);
+}
+.app__chat-icon{
+    --size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-rounded);
+    height: var(--size);
+    width: var(--size);
+    background-color: #fff;
+}
+.app__chat-icon-Archive{
+    background-color: #444444;
+}
+.app__chat-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.app__wrapper{
+    width: 100vw;
+    height: 100vh;
+}
