@@ -7,7 +7,7 @@ export default async function Id({ params } : { params: { user: string } }) : Pr
     return ( 
         <div className="app__wrapper-channel channel">
             {rows.map((row) => (
-                <div className="channel__header">
+                <div className="channel__header" key={row.id}>
                     <div className="channel__icon">
 
                     </div>
