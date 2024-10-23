@@ -1,12 +1,6 @@
 import "./channel.css";
 import { sql } from "@vercel/postgres";
 
-interface Props {
-    params: {
-        id: string
-    }
-}
-
 export default async function Id({ params } : { params: { user: string } }) : Promise<JSX.Element> {
 
     const { rows } = await sql`SELECT * FROM users WHERE id=${params.user}`;
