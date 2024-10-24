@@ -4,6 +4,7 @@ import Overlay from './overlay';
 import type { Metadata } from "next";
 import "./app.css";
 import Link from 'next/link';
+import { parseCookies } from 'nookies';
 
 //Icons
 import { Search } from 'lucide-react';
@@ -19,9 +20,13 @@ export default function AppLayout({
     }: Readonly<{
       children: React.ReactNode;
     }>) {
+        
+    const cookies = parseCookies();
+    const myCookie = cookies['myCookieName'];
 
-    return (
-        <html lang="en">
+   // if(myCookie){
+        return(
+            <html lang="en">
             <body>
                 <div className="app__container">
                     <div className="app__chats">
@@ -78,6 +83,15 @@ export default function AppLayout({
                 </div>
                 <Overlay/>
             </body>
-        </html>
-    );
-  }
+            </html>
+        ); 
+    /*} else {
+        return(
+            <html lang='en'>
+                <body>
+                    
+                </body>
+            </html>
+        )
+    }*/
+}

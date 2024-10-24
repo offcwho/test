@@ -29,7 +29,16 @@ const Overlay = () => {
         <animated.div className="overlay" style={overlayAnimation}>
             {isOpen && 
             <div className='overlay__container'>
-                overlay
+                <div className="overlay__wrapper">
+                    <div className="overlay__header">
+                        <div className="overlay__search">
+                            <input type="text" className="overlay__input" placeholder='Search...'/>
+                        </div>
+                        <button className="overlay__filter">
+                            
+                        </button>
+                    </div>
+                </div>
             </div>
             }
         </animated.div>

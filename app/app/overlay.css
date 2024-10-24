@@ -4,6 +4,7 @@
     top: 0;
 }
 .overlay__container{
+    padding: 50px;
     position: absolute;
     left: 0;
     top: 0;
