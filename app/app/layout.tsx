@@ -4,7 +4,7 @@ import Overlay from './overlay';
 import type { Metadata } from "next";
 import "./app.css";
 import Link from 'next/link';
-import { parseCookies } from 'nookies';
+//import { parseCookies } from 'nookies';
 
 //Icons
 import { Search } from 'lucide-react';
@@ -21,8 +21,8 @@ export default function AppLayout({
       children: React.ReactNode;
     }>) {
         
-    const cookies = parseCookies();
-   // const myCookie = cookies['myCookieName'];
+    //const cookies = parseCookies();
+    //const myCookie = cookies['myCookieName'];
 
    // if(myCookie){
         return(
