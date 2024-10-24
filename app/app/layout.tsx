@@ -22,7 +22,7 @@ export default function AppLayout({
     }>) {
         
     const cookies = parseCookies();
-    const myCookie = cookies['myCookieName'];
+   // const myCookie = cookies['myCookieName'];
 
    // if(myCookie){
         return(
